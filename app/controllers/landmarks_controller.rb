@@ -32,7 +32,8 @@ get '/landmarks' do
     @landmark.update(params[:landmark])
 
     if !params[:figure][:name].empty?
-      @landmark.figures << Figure.find_or_create_by(name: params[:figure][:name])
+      @landmark.figure = Figure.find_or_create_by(name: params[:figure][:name])
+      @landmark.save
     end
 
     erb :'landmarks/show'
