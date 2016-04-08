@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <title>Edit Landmark</title>
+</head>
+<body>
+  <h1>Edit Your Landmark!</h1>
+  <form action="/landmarks/<%=@landmark.id%>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+
+    <label for="landmark_name">Name: </label>
+    <input type="text" name="landmark[name]" value="<%=@landmark.name%>" id="landmark_name">
+    <br></br>
+
+    <label for="figure">Figure: </label>
+    <input type="text" name="figure[name]" id="new_figure" value="<%=landmark.figure.name%>">
+
+    <input type="submit" value="Edit landmark">
+  </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+  <title>Figures Index</title>
+</head>
+<body>
+  <h1>Historical Figures</h1>
+  <% Figure.all.each_with_index do |figure,i| %>
+    <%= "#{i+1}. "%><a href="/figures/<%=figure.id%>"><%= figure.name %></a>
+    <br>
+  <% end %>
+</body>
+</html>
